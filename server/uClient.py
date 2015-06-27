@@ -66,12 +66,12 @@ def scan(sock, x, y):
 
 # TODO: Parse scoreInfo
 def scoreboard(sock):
-	scoreInfo = run('SCOREBOARD')
+	scoreInfo = run(sock, 'SCOREBOARD')
 
 	return scoreInfo
 
 def configurations(sock):
-	configurationInfo = run('CONFIGURATIONS')
+	configurationInfo = run(sock, 'CONFIGURATIONS')
 
 	parsedConfigurations = re.findall(r'\s\d+\s', configurationInfo)
 
