@@ -23,8 +23,8 @@ def main(sock):
 ##################
 
 def mapBoard(sock):
-	diameter = CONFIGURATION_INFO.scanRadius * 2
-	angle = math.atan(diameter/CONFIGURATION_INFO.mapWidth)
+	diameter = CONFIGURATION_INFO['scanRadius'] * 2
+	angle = math.atan(diameter/CONFIGURATION_INFO['mapWidth'])
 
 	accel(sock, angel, 1)
 
@@ -76,18 +76,18 @@ def configurations(sock):
 	parsedConfigurations = re.findall(r'\s\d+\s', configurationInfo)
 
 	return {
-		mapWidth: parsedConfigurations[0],
-		mapHeight: parsedConfigurations[1],
-		captureRadius: parsedConfigurations[2],
-		visionRadius: parsedConfigurations[3],
-		friction: parsedConfigurations[4],
-		brakeFriction: parsedConfigurations[5],
-		bombPlaceRadius: parsedConfigurations[6],
-		bombEffectRadius: parsedConfigurations[7],
-		bombDelay: parsedConfigurations[8],
-		bombPower: parsedConfigurations[9],
-		scanRadius: parsedConfigurations[10],
-		scanDelay: parsedConfigurations[11]
+		'mapWidth': parsedConfigurations[0],
+		'mapHeight': parsedConfigurations[1],
+		'captureRadius': parsedConfigurations[2],
+		'visionRadius': parsedConfigurations[3],
+		'friction': parsedConfigurations[4],
+		'brakeFriction': parsedConfigurations[5],
+		'bombPlaceRadius': parsedConfigurations[6],
+		'bombEffectRadius': parsedConfigurations[7],
+		'bombDelay': parsedConfigurations[8],
+		'bombPower': parsedConfigurations[9],
+		'scanRadius': parsedConfigurations[10],
+		'scanDelay': parsedConfigurations[11]
 	}
 
 ##################
