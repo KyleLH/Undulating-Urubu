@@ -75,6 +75,10 @@ def configurations(sock):
 
 	parsedConfigurations = re.findall(r'\s\d+\s', configurationInfo)
 
+	print(configurationInfo)
+
+	print(parsedConfigurations)
+
 	return {
 		'mapWidth': parsedConfigurations[0],
 		'mapHeight': parsedConfigurations[1],
