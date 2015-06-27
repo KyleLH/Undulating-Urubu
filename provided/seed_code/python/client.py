@@ -1,4 +1,4 @@
-#!/opt/bb/bin/python
+#!/usr/bin/env python
 
 import socket
 import sys
