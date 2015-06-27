@@ -23,7 +23,8 @@ function shutDown() {
 
 function handleFrame() {
     client.write('STATUS\n');
-    client.write('ACCELERATE 3.14 1\n');
+    // client.write('ACCELERATE 3.14 1\n');
+    client.write('ACCELERATE '+Math.random()*Math.PI*2+' '+Math.random()+'\n');
     // TODO
 }
 
@@ -55,7 +56,7 @@ var client = net.connect({port: PORT, host: HOST},
 client.on('data', function (data) {
     var strData = data.toString();
     var tokens = strData.split(' ');
-    console.log(strData);  // for testing only
+    // console.log(strData);  // for testing only
     for (var i = 0, len = tokens.length; i < len; ++i) {
         var token = tokens[i];
         switch (token) {

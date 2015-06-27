@@ -1,0 +1,51 @@
+<html>
+    <!-- Declare the heading for the webpage -->
+    <head>
+        <!-- Set the title of the page -->
+        <title>BaseInvadersUI</title>
+        <!-- let the browser know we are working with utf-8 characters -->
+        <meta charset="utf-8" />
+        <!-- include the stylesheet for our elements -->
+        <link type="text/css" href="./index.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+        <!-- NEW LINE: Here we include the server side code for socket.io -->
+        <!-- since our script depends on it, we include it first -->
+        <script type="text/javascript" src="./socket-io.js"></script>
+        <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+        <script src="progressbar/progressbar.min.js"></script>
+
+        <!-- include our script -->
+    </head>
+    <!-- this is the start of what is displayed -->
+    <body>
+        <img id="shipsImg" src="./spaceships3.png" style="position: absolute; top : -1000px; left -1000px;"></img>
+        <div class="splash">
+        	<div id="loader"></div>
+        </div>
+        <script type="text/javascript" src="./index.js"></script>
+        <div class="content">
+	        <div id="sidebar">
+	        <div id="scoreboardholder">
+	        <div class="scoreHeader">
+	        	<div id="team">Team</div>
+	        	<div id="score">Score</div>
+	        	<div id="mines">Mines</div>
+	        	<hr id="bigDivide">
+	        </div>
+	        <!-- this block represents inline javascript, calling the onBodyLoad() function declared in the above client_page.js -->
+
+	        </div>
+	        <canvas id="testChart" width="500" height="400" ></canvas>
+	        </div>
+	        <canvas id="game-field" ></canvas>
+	        <script type="text/javascript">
+	            onBodyLoad();
+	        </script>
+	        <div id="stars"></div>
+	        <div id="stars2"></div>
+	        <div id="stars3"></div>
+        </div>
+    </body>
+</html>
