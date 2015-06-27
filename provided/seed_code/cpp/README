@@ -1,0 +1,9 @@
+Skeleton C++ client.
+
+To build, run 'make' in this directory.
+
+To run, do:
+
+./client <hostname> <port> <username> <pass> [-i]
+
+If -i is specified, commands can instead be typed by the user via stdin, and responses will print to stdout.

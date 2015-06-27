@@ -1,0 +1,5 @@
+Sample python client
+
+To run, do:
+
+python client.py <hostname> <port> <username> <pass>

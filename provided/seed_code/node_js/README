@@ -1,0 +1,6 @@
+Skeleton node.js client
+
+To run, do:
+
+node client.js <hostname> <port> <username> <pass>
+
